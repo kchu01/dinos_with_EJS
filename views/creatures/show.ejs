@@ -1,0 +1,25 @@
+<h1>Creature Show Page</h1>
+<a href="/creatures">Back to the creatures index</a>
+
+<div class="card">
+    <h2>
+        <%= creature.type %>
+    </h2>
+    <img src="<%= creature.img_url %>" alt="Image of Creature" width="500">
+    <form method="POST" action="/creatures/<%= creature.id %>/?_method=DELETE">
+        <input type="submit" value="Delete">
+    </form>
+
+    <form method="POST" action="/creatures/<%= creature.id %>/?_method=PUT">
+
+        <label>Type</label>
+        <input type="text" name="type" value="<%= creature.type %>">
+
+        <label>Img_Url</label>
+        <input type="text" name="img_url" value="<%= creature.img_url %>">
+        <input type="submit" value="Update">
+
+
+    </form>
+
+</div>

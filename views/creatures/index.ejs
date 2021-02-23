@@ -1,0 +1,12 @@
+<h1>Creatures Index Page</h1>
+<a href="creatures/new">New Creature</a>
+
+
+<% creatures.forEach(creature=> { %>
+    <div class="card">
+        <a href="/creatures/<%= creature.id %>">
+            <%= creature.type %>
+        </a>
+        <img src="<%= creature.img_url %>" alt="Image of Creature" width="500">
+    </div>
+    <% }) %>
